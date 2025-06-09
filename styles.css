@@ -1,0 +1,38 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.calculator{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.display{
+    text-align: end;
+    font-size: 25px;
+    width: 200px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.buttons-container{
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    height: 500px;
+    flex-wrap: wrap;
+    align-content: start;
+}
+
+.large-button{
+    width: 150px;
+    height: 50px;
+}
+
+.small-button{
+    width: 50px;
+    height: 50px;
+}

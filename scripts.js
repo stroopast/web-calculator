@@ -1,3 +1,24 @@
+let firstNumber;
+let secondNumber;
+let operator;
+
+function operate(op, a, b)
+{
+    switch(op)
+    {
+        case "+":
+            return add(a, b);
+        case "-":
+            return subtract(a, b);
+        case "*":
+            return multiply(a, b);
+        case "/":
+            return divide(a, b);
+        default:
+            break;
+    }
+}
+
 function add(a, b)
 {
     return a + b;
@@ -15,5 +36,10 @@ function multiply(a, b)
 
 function divide(a, b)
 {
-    a / b;
+    if(b == 0)
+    {
+        return NaN;
+    }
+    
+    return a / b;
 }

@@ -2,6 +2,18 @@ let firstNumber;
 let secondNumber;
 let operator;
 
+const display = document.querySelector(".display");
+const buttonsContainer = document.querySelector(".buttons-container");
+const buttons = buttonsContainer.querySelectorAll("button.small-button, button.large-button");
+
+buttons.forEach((button) => {
+  button.addEventListener('click',(event) => {
+    display.textContent = button.textContent;
+  });
+});
+
+display.textContent = "?";
+
 function operate(op, a, b)
 {
     switch(op)
@@ -40,6 +52,6 @@ function divide(a, b)
     {
         return NaN;
     }
-    
+
     return a / b;
 }
